@@ -11,17 +11,17 @@ const addressData = [
   {
     icon: faLocationDot,
     title: "Address",
-    description: "New Mexico, 31134",
+    description: "14, GraceAvenue,Olowofela,Magboro, ObafemiOwode,OgunState,Nigeria",
   },
   {
     icon: faEnvelope,
     title: "My Email",
-    description: "mymail@mail.com",
+    description: "Mustaphasegun937@gmail.com",
   },
   {
     icon: faPhone,
     title: "Call Me Now",
-    description: "00-123 00000",
+    description: "+2348037393578 ",
   },
 ];
 

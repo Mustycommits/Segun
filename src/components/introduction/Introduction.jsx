@@ -1,4 +1,4 @@
-import person from "../../assets/images/person.png";
+import profile from "../../assets/images/profile.jpg";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
 
@@ -7,7 +7,7 @@ const informationSummaryData = [
   {
     id: 1,
     title: "Experience",
-    description: "15 Y.",
+    description: "5 Y.",
   },
   {
     id: 2,
@@ -32,19 +32,19 @@ const Introduction = () => {
           <p className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
             Hello, I’m
             <span className="text-nowrap shrink-0 inline-block w-full">
-              Brooklyn Gilbert
+              Oluwasegun Mustapha
             </span>
           </p>
           <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            I'm a Freelance <span className="bg-highlight">UI/UX Designer</span>{" "}
-            and <span className="bg-highlight"> Developer</span> based in
-            London, England. I strives to build immersive and beautiful web
-            applications through carefully crafted code and user-centric design.
+            I'm a  <span className="bg-highlight">HR Generalist</span>{" "}
+            and <span className="bg-highlight"> Admin Executive</span> based in
+            Lagos, Nigeria. I help businesses to manage their human resources and
+            administrative tasks effectively.
           </p>
           <p className="text-center lg:text-start">
             <a
               className="btn-primary btn btn-xs xxs:btn-lg text-white"
-              href="mailto:example@gmail.com"
+              href="mailto:Mustaphasegun937@gmail.com"
             >
               Say Hello!
             </a>
@@ -63,8 +63,8 @@ const Introduction = () => {
       >
         <img
           className={`shadow-2xl shadow-gray-200 w-full h-full absolute bottom-0 object-cover bg-white rounded-3xl`}
-          src={person}
-          alt="person"
+          src={profile}
+          alt="profile"
         />
       </div>
     </div>

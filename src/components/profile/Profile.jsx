@@ -1,4 +1,4 @@
-import person from "../../assets/images/person2.png";
+import person from "../../assets/images/profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
@@ -16,7 +16,7 @@ const Profile = () => {
             <img
               className="bg-soft-white h-[120%] object-cover"
               src={person}
-              alt=""
+              alt="person"
             />
           </div>
           {/* Social media section */}
@@ -33,19 +33,19 @@ const Profile = () => {
           <h2
             className={`text-2xl xxs:text-3xl sm:text-4xl lg:text-[38px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8`}
           >
-            I am Professional User Experience Designer
+            I am Professional Human Resources & Admin Executive
           </h2>
           <div
             className={`text-xs xs:text-[16px] lg:text-lg font-normal max-md:text-center text-gray-600`}
           >
             <p className={``}>
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services and online stores. My
-              passion is to design digital user experiences.
+              I am a Human Resources and Admin Executive with over 5 years of
+              experience in managing HR functions, employee relations, and office
+              administration. 
             </p>
             <p className="mt-3">
-              I design and develop services for customers specializing creating
-              stylish, modern websites, web services.
+              I am skilled in recruitment, performance management, and policy
+              development.  
             </p>
           </div>
           <div className="mt-8 flex max-md:justify-center">

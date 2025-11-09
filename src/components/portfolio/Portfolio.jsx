@@ -10,8 +10,8 @@ const projectData = [
   {
     id: 1,
     image: card1,
-    category: "UI-UX DESIGN",
-    title: "Product Admin Dashboard",
+    category: "HR",
+    title: "Evercaare Hospital",
     description:
       "I focus on crafting smooth, responsive interfaces that balance aesthetic appeal with practical functionality.",
     link: "#!",
@@ -19,8 +19,8 @@ const projectData = [
   {
     id: 2,
     image: card2,
-    category: "UI-UX DESIGN",
-    title: "Product Admin Dashboard",
+    category: "HR",
+    title: "Shalina Healthcare Nigeria Limited",
     description:
       "Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.",
     link: "#!",
@@ -28,8 +28,8 @@ const projectData = [
   {
     id: 3,
     image: card3,
-    category: "UI-UX DESIGN",
-    title: "Product Admin Dashboard",
+    category: "HR",
+    title: "AAVA Brands Manufacturing Limited",
     description:
       "Developed a modern admin panel with a focus on usability and seamless navigation for end users and so on.",
     link: "#!",
@@ -37,30 +37,13 @@ const projectData = [
   {
     id: 4,
     image: card4,
-    category: "UI-UX DESIGN",
-    title: "Product Admin Dashboard",
+    category: "HR",
+    title: "Suntory Beverages and Food ,Nigeria ",
     description:
       "Created a responsive dashboard layout that adapts smoothly across devices and screen sizes and so on.",
     link: "#!",
   },
-  {
-    id: 5,
-    image: card5,
-    category: "UI-UX DESIGN",
-    title: "Product Admin Dashboard",
-    description:
-      "Implemented interactive charts and widgets to visualize product data effectively for stakeholders.",
-    link: "#!",
-  },
-  {
-    id: 6,
-    image: card6,
-    category: "UI-UX DESIGN",
-    title: "Product Admin Dashboard",
-    description:
-      "Enhanced user experience by streamlining workflows and optimizing interface components and so on.",
-    link: "#!",
-  },
+  
 ];
 
 const Portfolio = () => {
