@@ -31,15 +31,14 @@ const Introduction = () => {
         <div className="pt-13 me-31.5 w-full lg:w-auto transition-all duration-500">
           <p className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
             Hello, I’m
-            <span className="text-nowrap shrink-0 inline-block ">
+            <span className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full">
               Oluwasegun Mustapha
             </span>
           </p>
           <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            I'm a  versatile<span className="bg-highlight">HR </span>{" "} professional
-            based in
-            Lagos, Nigeria. I help businesses to manage their human resources and
-            administrative tasks effectively.
+            I'm a versatile<span className="bg-highlight">HR </span>{" "}
+            professional based in Lagos, Nigeria. I help businesses to manage
+            their human resources and administrative tasks effectively.
           </p>
           <p className="text-center lg:text-start">
             <a
