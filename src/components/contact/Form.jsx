@@ -19,8 +19,7 @@ const Form = () => {
   return (
     <div>
       <p className="text-[12px] xs:text-[14px] max-lg:text-center sm:text-lg font-normal text-soft-dark">
-        I'm always open to discussing product design work or partnership
-        opportunities.
+        
       </p>
       <div className="mx-2">
         <form className="flex flex-col gap-4 mt-4">
@@ -44,12 +43,6 @@ const Form = () => {
           />
 
           <div className="flex max-xs:flex-col max-xs:gap-4">
-            <input
-              type="text"
-              placeholder="Budget*"
-              className={`${commonClass} xs:w-[50%] me-5`}
-              required
-            />
             <input
               type="text"
               placeholder="Subject*"

@@ -1,49 +1,44 @@
 import Projects from "./Projects";
-import card1 from "../../assets/images/portfolio-images/card-1.png";
-import card2 from "../../assets/images/portfolio-images/card-2.png";
-import card3 from "../../assets/images/portfolio-images/card-3.png";
-import card4 from "../../assets/images/portfolio-images/card-4.png";
-import card5 from "../../assets/images/portfolio-images/card-5.png";
-import card6 from "../../assets/images/portfolio-images/card-6.png";
-
+import aava from "../../assets/images/portfolio-images/aava.jpeg";
+import evercare from "../../assets/images/portfolio-images/evercare.png";
+import shalina from "../../assets/images/portfolio-images/shalina.png";
+import suntory from "../../assets/images/portfolio-images/suntory.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 const projectData = [
   {
     id: 1,
-    image: card1,
-    category: "HR",
-    title: "Evercaare Hospital",
-    description:
-      "I focus on crafting smooth, responsive interfaces that balance aesthetic appeal with practical functionality.",
+    image: suntory,
+    category: "",
+    title: "Suntory Beverages and Food ,Nigeria ",
+    description: "HR Officer (Aug 2021 – December 2022)",
     link: "#!",
   },
   {
     id: 2,
-    image: card2,
-    category: "HR",
-    title: "Shalina Healthcare Nigeria Limited",
-    description:
-      "Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.",
+    image: aava,
+    category: "",
+    title: "AAVA Brands Manufacturing Limited",
+    description: "People & Culture Officer (Nov 2022 – Mar 2023)",
     link: "#!",
   },
   {
     id: 3,
-    image: card3,
-    category: "HR",
-    title: "AAVA Brands Manufacturing Limited",
-    description:
-      "Developed a modern admin panel with a focus on usability and seamless navigation for end users and so on.",
+    image: shalina,
+    category: "",
+    title: "Shalina Healthcare Nigeria Limited",
+    description: "HR/Admin Executive (Mar 2023 – Sept 2024)",
     link: "#!",
   },
+
   {
     id: 4,
-    image: card4,
-    category: "HR",
-    title: "Suntory Beverages and Food ,Nigeria ",
-    description:
-      "Created a responsive dashboard layout that adapts smoothly across devices and screen sizes and so on.",
+    image: evercare,
+    category: "",
+    title: "Evercare Hospital",
+    description: "HR Business Partner (March 2025 – Present)",
     link: "#!",
   },
-  
 ];
 
 const Portfolio = () => {
@@ -55,10 +50,6 @@ const Portfolio = () => {
       <div className="xl:mb-17.5 mb-5">
         <div className="max-sm:px-2 text-center mx-auto max-w-144.25">
           <p className="section-title ">Portfolio</p>
-          <p className="font-normal text-[18px] max-sm:text-[14px] pt-6 text-gray-400">
-            Here's a selection of my recent work, showcasing my skills in
-            creating user-centric and visually appealing interfaces.
-          </p>
         </div>
       </div>
       <div className="mx-auto flex justify-center">
@@ -70,10 +61,11 @@ const Portfolio = () => {
       </div>
       <div className="text-center">
         <a
-          href="#!"
-          className="btn btn-primary py-3 px-6 mt-12.5 text-center text-[16px] font-semibold"
+          className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px] hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
+          href="#src\assets\Mustapha Oluwasegun CV.pdf!"
+          download
         >
-          More Project
+          <FontAwesomeIcon icon={faDownload} /> Download CV
         </a>
       </div>
     </div>

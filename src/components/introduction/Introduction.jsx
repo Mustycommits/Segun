@@ -7,12 +7,12 @@ const informationSummaryData = [
   {
     id: 1,
     title: "Experience",
-    description: "5 Y.",
+    description: "5 Y+",
   },
   {
     id: 2,
-    title: "Projects Completed",
-    description: "250+",
+    title: "HR Metrics improved",
+    description: "10+",
   },
   {
     id: 3,
@@ -36,8 +36,8 @@ const Introduction = () => {
             </span>
           </p>
           <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            I'm a  <span className="bg-highlight">HR Generalist</span>{" "}
-            and <span className="bg-highlight"> Admin Executive</span> based in
+            I'm a  versatile<span className="bg-highlight">HR </span>{" "} professional
+            based in
             Lagos, Nigeria. I help businesses to manage their human resources and
             administrative tasks effectively.
           </p>
@@ -46,7 +46,7 @@ const Introduction = () => {
               className="btn-primary btn btn-xs xxs:btn-lg text-white"
               href="mailto:Mustaphasegun937@gmail.com"
             >
-              Say Hello!
+              Get in touch!
             </a>
           </p>
         </div>

@@ -12,16 +12,19 @@ const addressData = [
     icon: faLocationDot,
     title: "Address",
     description: "14, GraceAvenue,Olowofela,Magboro, ObafemiOwode,OgunState,Nigeria",
+    
   },
   {
     icon: faEnvelope,
     title: "My Email",
     description: "Mustaphasegun937@gmail.com",
+    link: "mailto:Mustaphasegun937@gmail.com"
   },
   {
     icon: faPhone,
     title: "Call Me Now",
     description: "+2348037393578 ",
+    link: "tel:+2348037393578"
   },
 ];
 
@@ -39,8 +42,8 @@ const Contact = () => {
                 Let’s discuss your Project
               </p>
               <p className="text-[12px] xs:text-[14px] sm:text-lg md:text-lg max-lg:text-center pt-4 font-normal text-soft-dark">
-                I'm available for freelance work. Drop me a line if you have a
-                project you think I'd be a good fit for.
+                I'm always open to discussing product  work or partnership
+        opportunities.
               </p>
             </div>
             <div className="my-8.75 sm:max-lg:flex justify-between items-center">
