@@ -82,8 +82,7 @@ const Blog = () => {
       <div className="max-w-135 text-center mx-auto pb-17.5">
         <p className="section-title pb-6">Blog</p>
         <p className="text-xs xs:text-[16px] md:text-lg text-gray-400">
-          Check out my recent blog posts where I share insights on design,
-          development, and the latest industry trends.
+          Check out my other projects
         </p>
       </div>
       <Swiper

@@ -9,6 +9,8 @@ import HappyClients from "../components/happyClients/HappyClients";
 import Testimonial from "../components/testimonial/Testimonial";
 import Contact from "../components/contact/Contact";
 import "../../index.css";
+import { useState } from "react";
+
 
 const Home = () => {
   return (
@@ -24,7 +26,7 @@ const Home = () => {
       </div>
       <Portfolio />
       <div className="bg-soft-white">
-        
+        {/* blog */}
       </div>  
       <Testimonial />
       <Contact />
