@@ -1,4 +1,5 @@
 import WorkSteps from "./WorkSteps";
+import { motion } from "framer-motion";
 
 const workStepData = [
   {
@@ -35,6 +36,22 @@ const workStepData = [
   },
 ];
 
+const cardVariants = {
+  hidden: (custom) => ({
+    opacity: 0,
+    x: custom % 2 === 0 ? -50 : 50, 
+  }),
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 20,
+    },
+  },
+};
+
 const WorkProcess = () => {
   return (
     <div
@@ -44,24 +61,29 @@ const WorkProcess = () => {
       <div className="lg:pe-10 xl:pe-35.75 max-xs:mb-3 max-xl:mb-8">
         <p className="section-title max-xl:text-center">Work Process</p>
         <p className="mt-6 mb-4 md:text-[18px] text-sm font-normal max-xl:text-center text-gray-500">
-          Focused on people and guided by strategy, I help build workplace systems that feel organized, fair, and supportive.
-          Every policy, process, and employee interaction is crafted with intention , balancing efficiency with human-centered clarity.
+          Focused on people and guided by strategy, I help build workplace
+          systems that feel organized, fair, and supportive. Every policy,
+          process, and employee interaction is crafted with intention, balancing
+          efficiency with human-centered clarity.
         </p>
-        
       </div>
 
-      <div className="grid xs:grid-cols-2 justify-end my-2 w-fit mx-auto ">
-        {workStepData.map((data, index) => {
-          return (
+      <div className="grid xs:grid-cols-2 gap-5 items-stretch my-2">
+        {workStepData.map((data, index) => (
+          <motion.div
+            key={index}
+            custom={index}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <WorkSteps
               data={data}
-              style={`max-xs:mt-3 p-4 sm:p-8 bg-white aspect-auto sm:max-w-78 ${
-                index % 2 == 1 ? "xs:ms-3 xs:mt-6 " : "xs:mb-6"
-              }`}
-              key={index}
+              style={`max-xs:mt-3 p-4 sm:p-8 bg-white aspect-auto sm:max-w-78`}
             />
-          );
-        })}
+          </motion.div>
+        ))}
       </div>
     </div>
   );
