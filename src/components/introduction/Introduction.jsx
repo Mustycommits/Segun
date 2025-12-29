@@ -1,4 +1,4 @@
-import profile from "../../assets/images/profile.jpg";
+import profile from "../../assets/images/segun.png";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
 import { motion, AnimatePresence } from "framer-motion";
