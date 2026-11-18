@@ -51,14 +51,14 @@ const WorkSteps = ({ data, style }) => {
       </motion.div>
 
       <div className="mt-3 xs:mt-4 sm:mt-8">
-        <motion.p
+        <motion.h3
           initial={{ x: -10, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.4 }}
           className="font-semibold sm:text-xl"
         >
           {`${data?.id}. ${data?.title}`}
-        </motion.p>
+        </motion.h3>
         <motion.p
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

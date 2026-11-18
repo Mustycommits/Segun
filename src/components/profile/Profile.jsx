@@ -1,6 +1,5 @@
-import person from "../../assets/images/segun.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import person from "../../assets/images/segun.webp";
+import { Link } from "react-scroll";
 import SocialMedia from "../common/socialMedia/SocialMedia";
 import { motion } from "framer-motion";
 
@@ -17,7 +16,7 @@ const Profile = () => {
             <img
               className="bg-soft-white h-[120%] object-cover"
               src={person}
-              alt="person"
+              alt="Oluwasegun Mustapha"
             />
           </div>
           {/* Social media section */}
@@ -45,7 +44,7 @@ const Profile = () => {
             I am a versatile Human Resources Professional
           </motion.h2>
           <div
-            className={`text-xs xs:text-[16px] lg:text-lg font-normal max-md:text-center text-gray-600`}
+            className={`text-sm xs:text-[16px] lg:text-lg font-normal max-md:text-center text-gray-600`}
           >
             <p className={``}>
               I am a Human Resources and Admin Executive with over 5 years of
@@ -58,12 +57,15 @@ const Profile = () => {
             </p>
           </div>
           <div className="mt-8 flex max-md:justify-center">
-            <a
-              className="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px]"
-              href="#!"
+            <Link
+              to="portfolio"
+              smooth={true}
+              duration={900}
+              offset={-100}
+              className="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px] cursor-pointer"
             >
-              My Projects
-            </a>
+              View my experience
+            </Link>
           </div>
         </div>
       </div>

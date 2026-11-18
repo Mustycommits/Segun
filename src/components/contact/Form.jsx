@@ -15,53 +15,74 @@ const telegramSVG = (
 const commonClass =
   "input input-lg border-0 border-b-2 focus:outline-none focus:placeholder:text-picto-primary placeholder:text-[15px] md:placeholder:text-lg focus:border-picto-primary border-[#E6E8EB] w-full rounded-none px-0";
 
+const RECIPIENT = "Mustaphasegun937@gmail.com";
+
+// There is no server behind this site, so the form opens the visitor's email
+// app with the message already filled in.
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const data = new FormData(event.currentTarget);
+  const subject = data.get("subject");
+  const body = [
+    data.get("message"),
+    "",
+    `From: ${data.get("name")}`,
+    `Email: ${data.get("email")}`,
+    `Location: ${data.get("location")}`,
+  ].join("\n");
+  window.location.href = `mailto:${RECIPIENT}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+};
+
+const fields = [
+  { name: "name", label: "Name", type: "text", autoComplete: "name" },
+  { name: "email", label: "Email", type: "email", autoComplete: "email" },
+  { name: "location", label: "Location", type: "text", autoComplete: "address-level2" },
+  { name: "subject", label: "Subject", type: "text", autoComplete: "off" },
+];
+
 const Form = () => {
   return (
     <div>
-      <p className="text-[12px] xs:text-[14px] max-lg:text-center sm:text-lg font-normal text-soft-dark">
-        
-      </p>
       <div className="mx-2">
-        <form className="flex flex-col gap-4 mt-4">
-          <input
-            type="text"
-            placeholder="Name*"
-            className={`${commonClass}`}
-            required
-          />
-          <input
-            type="email"
-            placeholder="Email*"
-            className={`${commonClass}`}
-            required
-          />
-          <input
-            type="text"
-            placeholder="Location*"
-            className={`${commonClass}`}
-            required
-          />
+        <form className="flex flex-col gap-4 mt-4" onSubmit={handleSubmit}>
+          {fields.map((field) => (
+            <div key={field.name}>
+              <label htmlFor={`contact-${field.name}`} className="sr-only">
+                {field.label}
+              </label>
+              <input
+                id={`contact-${field.name}`}
+                name={field.name}
+                type={field.type}
+                autoComplete={field.autoComplete}
+                placeholder={`${field.label}*`}
+                className={commonClass}
+                required
+              />
+            </div>
+          ))}
 
-          <div className="flex max-xs:flex-col max-xs:gap-4">
-            <input
-              type="text"
-              placeholder="Subject*"
-              className={`${commonClass}`}
+          <div>
+            <label htmlFor="contact-message" className="sr-only">
+              Message
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows={4}
+              placeholder="Message*"
+              className="textarea textarea-lg border-0 border-b-2 focus:outline-none focus:placeholder:text-picto-primary placeholder:text-[15px] md:placeholder:text-lg focus:border-picto-primary border-[#E6E8EB] w-full rounded-none px-0 resize-none"
               required
             />
           </div>
 
-          <input
-            type="text"
-            placeholder="Message*"
-            className={`${commonClass}`}
-            required
-          />
           <button
             type="submit"
             className="btn gap-3 max-lg:mx-auto btn-primary rounded-sm mt-5 text-[13px] md:text-[16px] w-fit font-semibold lg:mt-12.5 p-2 md:px-4"
           >
-            Submit {telegramSVG}
+            Send message {telegramSVG}
           </button>
         </form>
       </div>

@@ -1,22 +1,11 @@
-import {
-  faBehance,
-  faDribbble,
-  faFacebookF,
-  faInstagram,
-  faLinkedin,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faLocationDot,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const socialIcons = [
-  { icon: faWhatsapp, link: "https://wa.me/+2348037393578" },
-  { icon: faLinkedin, link: "https://www.linkedin.com/in/oluwasegun-mustapha-9860761b6/" },
-  { icon: faEnvelope, link: "mailto:Mustaphasegun937@gmail.com" },
+  { icon: faWhatsapp, label: "WhatsApp", link: "https://wa.me/2348037393578" },
+  { icon: faLinkedin, label: "LinkedIn", link: "https://www.linkedin.com/in/oluwasegun-mustapha-9860761b6/" },
+  { icon: faEnvelope, label: "Email", link: "mailto:Mustaphasegun937@gmail.com" },
 ];
 
 const SocialMedia = () => {
@@ -24,7 +13,11 @@ const SocialMedia = () => {
     <a
       href={item.link}
       className={`text-picto-primary hover:bg-picto-primary p-2 pt-3 xs:p-2.5 xs:pt-3.75 sm:pt-4 md:pt-5 sm:p-3 md:p-3.75 hover:text-white rounded-md`}
-      key={index} target="blank"
+      key={index}
+      aria-label={item.label}
+      {...(item.link.startsWith("http")
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
     >
       <FontAwesomeIcon
         icon={item.icon}

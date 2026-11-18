@@ -1,7 +1,7 @@
-import profile from "../../assets/images/segun.png";
+import profile from "../../assets/images/segun.webp";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 // Information summary data
 const informationSummaryData = [
@@ -30,10 +30,10 @@ const Introduction = () => {
     >
       <div className="w-full flex flex-col justify-between max-lg:text-center">
         <div className="pt-13 me-31.5 w-full lg:w-auto transition-all duration-500">
-          <motion.p
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay:0.7,duration: 0.5 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
             className="text-3xl xxs:text-4xl sm:max-xl:text-5xl xl:text-6xl font-semibold w-full"
           >
             Hello, I’m
@@ -45,14 +45,14 @@ const Introduction = () => {
             >
               Oluwasegun Mustapha
             </motion.span>
-          </motion.p>
+          </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.5 }}
-            className="text-xs xxs:text-lg lg:text-[18px] my-6"
+            className="text-sm xxs:text-lg lg:text-[18px] my-6"
           >
-            I'm a versatile<span className="bg-highlight">HR </span>{" "}
+            I'm a versatile <strong className="font-semibold">HR</strong>{" "}
             professional based in Lagos, Nigeria. I help businesses to manage
             their human resources and administrative tasks effectively.
           </motion.p>
@@ -85,7 +85,7 @@ const Introduction = () => {
         <img
           className="shadow-2xl shadow-gray-200 w-full h-full absolute bottom-0 object-cover bg-white rounded-3xl"
           src={profile}
-          alt="profile"
+          alt="Portrait of Oluwasegun Mustapha"
         />
       </motion.div>
     </div>
