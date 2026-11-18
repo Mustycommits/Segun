@@ -11,19 +11,18 @@ const addressData = [
   {
     icon: faLocationDot,
     title: "Address",
-    description: "14, GraceAvenue,Olowofela,Magboro, ObafemiOwode,OgunState,Nigeria",
-    
+    description: "14, Grace Avenue, Olowofela, Magboro, Obafemi Owode, Ogun State, Nigeria",
   },
   {
     icon: faEnvelope,
-    title: "My Email",
+    title: "Email",
     description: "Mustaphasegun937@gmail.com",
     link: "mailto:Mustaphasegun937@gmail.com"
   },
   {
     icon: faPhone,
-    title: "Call Me Now",
-    description: "+2348037393578 ",
+    title: "Phone",
+    description: "+234 803 739 3578",
     link: "tel:+2348037393578"
   },
 ];
@@ -38,12 +37,12 @@ const Contact = () => {
         <div className="flex flex-col-reverse lg:gap-5 xl:gap-25.75 lg:flex-row justify-between">
           <div>
             <div>
-              <p className="text-[35px] max-lg:hidden font-semibold text-nowrap text-[#132238]">
-                Let’s discuss your Project
-              </p>
+              <h2 className="text-[35px] max-lg:hidden font-semibold text-nowrap text-[#132238]">
+                Let’s work together
+              </h2>
               <p className="text-[12px] xs:text-[14px] sm:text-lg md:text-lg max-lg:text-center pt-4 font-normal text-soft-dark">
-                I'm always open to discussing product  work or partnership
-        opportunities.
+                I'm open to HR roles, consulting work and partnership
+                opportunities. Send a message and I'll reply by email.
               </p>
             </div>
             <div className="my-8.75 sm:max-lg:flex justify-between items-center ">
@@ -55,10 +54,10 @@ const Contact = () => {
               <SocialMedia />
             </div>
           </div>
-          <div className="w-full overflow-y-scroll py-6.5">
-            <p className="text-xl mb-2 xs:text-2xl sm:text-2xl md:text-[38px] font-semibold text-[#132238] lg:hidden text-center">
-              Let’s discuss your Project
-            </p>
+          <div className="w-full py-6.5">
+            <h2 className="text-xl mb-2 xs:text-2xl sm:text-2xl md:text-[38px] font-semibold text-[#132238] lg:hidden text-center">
+              Let’s work together
+            </h2>
             <Form />
           </div>
         </div>

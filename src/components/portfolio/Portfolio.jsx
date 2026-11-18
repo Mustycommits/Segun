@@ -5,19 +5,19 @@ import shalina from "../../assets/images/portfolio-images/shalina.png";
 import suntory from "../../assets/images/portfolio-images/suntory.png";
 import analyst from "../../assets/images/portfolio-images/analyst.png";
 import pgaj from "../../assets/images/portfolio-images/PGAJ.jpeg";
+import cv from "../../assets/Mustapha Oluwasegun CV.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import Modal from "./modal"; 
-import { useState } from "react";
-
+import Modal from "./modal";
+import { useCallback, useState } from "react";
 
 
 const projectData = [
   {
     id: 1,
     image: suntory,
-    category: "HR Officer (Aug 2021 – December 2022)",
-    title: "Suntory Beverages and Food ,Nigeria ",
+    category: "HR Officer (Aug 2021 – Dec 2022)",
+    title: "Suntory Beverages and Food, Nigeria",
     description: `
 •Weekly GEMBA site tour.
 •Coordinate union meetings.
@@ -81,7 +81,7 @@ incentives, enhancing employee competency and readiness to meet industry challen
   {
     id: 4,
     image: evercare,
-    category: "HR Business Partner (March 2025 – Present)",
+    category: "HR Business Partner (Mar 2025 – Present)",
     title: "Evercare Hospital",
     description: `
     •Assess manpower needs across hospital units, maintaining optimal staffing levels while adhering to a
@@ -90,7 +90,7 @@ incentives, enhancing employee competency and readiness to meet industry challen
 without exceeding budget constraints.
 •Recruit skilled staff across medical, allied health, nursing, and administrative departments,
 significantly improving Time to Hire and Time to Fill metrics.
-Proactively address manpower gaps to maintain seamless operations.
+•Proactively address manpower gaps to maintain seamless operations.
 • Manage an annual training budget of ₦250 million in collaboration with the HR Director to enhance
 functional and behavioral competencies, ensuring maximum ROI from training investments.
 • Maintain a seamless onboarding and offboarding process to support smooth transitions and
@@ -102,7 +102,7 @@ interviews.
 •Training, learning, and development – Assist in designing and coordinating training, L &D programs.
 • Performance Management -Assist in implementing approved performance appraisal schedule, create
 awareness, educate HODs and managers, and monitor the review process with full documentation.
-Employee Relations – Assist in the preparation of all staff correspondence, letters, reference
+• Employee Relations – Assist in the preparation of all staff correspondence, letters, reference
 requests, etc. from employment to exit, management of staff records, grievances, and disciplinary
 issues.
 •Compliance with all regulatory requirements related to Human resources.
@@ -114,7 +114,7 @@ issues.
   {
     id: 5,
     image: analyst,
-    category: "TeamLeadHR Analyst (May 2024 – December 2025",
+    category: "Team Lead HR Analyst (May 2024 – December 2025)",
     title: "The Analyst Hub",
     description: `
       •Coordinate the recruitment process, including job posting, candidate screening, interviewing, and selection.
@@ -124,7 +124,7 @@ employees.
 and resolution as needed.
 •Conduct investigations into employee complaints or misconduct and recommend appropriate
 actions in compliance with company policies and regulations.
-•Assist in developing and implementing performance management processes, including objective--
+•Assist in developing and implementing performance management processes, including objective-
 setting, performance reviews, and feedback mechanisms.
 •Support supervisors in addressing performance issues and implementing performance improvement plans.
 •Coordinate employee training programs to enhance skills and competencies, in alignment with
@@ -141,7 +141,7 @@ to company policies and procedures as needed.
   {
     id: 6,
     image: pgaj,
-    category: "Team Lead Virtual HR Assistant (January 2024 – May 2024)",
+    category: "Team Lead Virtual HR Assistant (Jan 2024 – May 2024)",
     title: "Project Get A Job",
     description: `
       •Maintaining and implementing screening criteria for job seeker applications based on partner
@@ -170,8 +170,15 @@ highlighting recruitment outcomes and trends.
   },
 ];
 
+// Most recent role first
+const displayOrder = [4, 5, 6, 3, 2, 1];
+const orderedProjects = displayOrder.map((id) =>
+  projectData.find((project) => project.id === id)
+);
+
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const closeModal = useCallback(() => setSelectedProject(null), []);
   return (
     <div
       className="content mt-10 md:mt-15 xl:mt-25 mb-10 md:mb-25 max-xxl:p-2"
@@ -179,25 +186,25 @@ const Portfolio = () => {
     >
       <div className="xl:mb-17.5 mb-5">
         <div className="max-sm:px-2 text-center mx-auto max-w-144.25">
-          <p className="section-title ">Work Experience</p>
+          <h2 className="section-title">Work Experience</h2>
         </div>
       </div>
       <div className="mx-auto flex justify-center">
-        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
-          {projectData.map((data, index) => (
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6 items-stretch">
+          {orderedProjects.map((data) => (
             <Projects
               data={data}
-              key={index}
+              key={data.id}
               onClick={() => setSelectedProject(data)}
             />
           ))}
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center mt-12">
         <a
-          className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px] hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
-          href="#src\assets\Mustapha Oluwasegun CV.pdf!"
-          download
+          className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px] hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  `}
+          href={cv}
+          download="Oluwasegun-Mustapha-CV.pdf"
         >
           <FontAwesomeIcon icon={faDownload} /> Download CV
         </a>
@@ -205,14 +212,11 @@ const Portfolio = () => {
       <Modal
         isOpen={selectedProject !== null}
         data={selectedProject}
-        onClose={() => setSelectedProject(null)}
+        onClose={closeModal}
       />
     </div>
   );
 };
-
-
-
 
 
 export default Portfolio;

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import logo from "../../../assets/logo.png";
 import { Link } from "react-scroll";
 
 const navItems = [
   { id: 1, name: "Home", url: "introduction" },
   { id: 2, name: "About", url: "profile" },
   { id: 3, name: "Process", url: "work-process" },
-  { id: 4, name: "Portfolio", url: "portfolio" },
+  { id: 4, name: "Experience", url: "portfolio" },
+  { id: 5, name: "Testimonials", url: "testimonials" },
 ];
 
 const handleMenuClick = () => {
@@ -59,7 +59,7 @@ const NavBar = () => {
       <div className="navbar flex justify-between mx-auto content">
         <div className="flex items-center justify-between">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" aria-label="Open menu" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -84,15 +84,14 @@ const NavBar = () => {
           </div>
 
           <Link
-            href="#introduction"
             to={`introduction`}
             smooth={true}
             duration={900}
             className="flex items-center border-0 lg:max-xxl:ps-5"
           >
             
-            <p className="text-2xl sm:text-[32px] my-auto ms-[12px] font-semibold">
-              Habeeb
+            <p className="text-lg xxs:text-xl sm:text-[28px] my-auto ms-[12px] font-semibold whitespace-nowrap">
+              Oluwasegun Mustapha
             </p>
           </Link>
         </div>
@@ -104,7 +103,6 @@ const NavBar = () => {
           <p className="">
             <Link
               className="btn btn-sm xs:btn-md sm:btn-lg btn-primary"
-              href="#contact"
               to={`contact`}
               smooth={true}
               duration={900}

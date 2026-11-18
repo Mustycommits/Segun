@@ -59,3 +59,33 @@ body {
   background: radial-gradient(circle at -10% 0%, #da4df166 1%, transparent 25%),
     radial-gradient(circle at 110% 30%, #c4f5e9b2 5%, transparent 25%);
 }
+
+/* Keyboard focus that matches the brand colour */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--color-picto-primary);
+  outline-offset: 2px;
+}
+
+/* Testimonial pagination dots in the brand colour */
+.swiper {
+  --swiper-theme-color: var(--color-picto-primary);
+  --swiper-pagination-bullet-inactive-color: #c9ced6;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+html {
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

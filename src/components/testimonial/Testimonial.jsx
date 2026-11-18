@@ -13,7 +13,7 @@ const testimonialData = [
       "Working with Mr Oluwasegun is amazing..He is such a skilled employee & having strong expertise in his role play.Good in administration activities & many of the employee engagement programs successfully executed with his creative thoughts & involvement.Apart from that he is having excellent content writing abilities & appreciable employee friendly characteristics.",
     quote: `Good in administration activities & many of the employee engagement programs successfully executed with his creative thoughts & involvement`,
     name: "Nataraj Mpharm, MBA",
-    designation: "Head – Manufacturing & Operations,Shalina Healthcare",
+    designation: "Head – Manufacturing & Operations, Shalina Healthcare",
   },
   {
     message:
@@ -33,9 +33,12 @@ const testimonialData = [
 
 const Testimonial = () => {
   return (
-    <div className="flex mx-auto justify-center px-2 max-w-218 pb-10 md:pb-25">
-      <div className="w-full h-full cursor-grab">
-        <p className="section-title mb-6 text-center">Testimonial</p>
+    <div
+      id="testimonials"
+      className="flex mx-auto justify-center px-2 max-w-218 pb-10 md:pb-25"
+    >
+      <div className="w-full h-full cursor-grab pb-2">
+        <h2 className="section-title mb-6 text-center">Testimonials</h2>
         <Swiper
           id="testimonialSwiper"
           spaceBetween={30}
